@@ -245,6 +245,7 @@ video {
     border: 2px solid #8e9297;
     border-radius: 3px;
     height: 450px;
+    width: 25%;
     transition: border-color .2s, height 0.8s ease-in-out;
 }
 
