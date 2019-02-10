@@ -330,7 +330,7 @@ video {
 }
 
 .portfolio-item:hover:before {
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .portfolio-item__description {
