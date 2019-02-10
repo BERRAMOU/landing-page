@@ -582,6 +582,11 @@ textarea {
     box-sizing: border-box;
 }
 
+textarea:focus, input:focus {
+    outline: none;
+    border-top: 2px solid #c59a6d;
+}
+
 .submit-btn {
     display: inline-block;
     float: right;
@@ -589,7 +594,6 @@ textarea {
 
 button[type="submit"] {
     margin-top: 35px;
-    /*margin-right: 10px;*/
     background-color: #c59a6d;
     color: white;
     outline-style: none;
