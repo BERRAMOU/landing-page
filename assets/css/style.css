@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 body, html {
     margin: 0;
     padding: 0;
@@ -553,7 +554,7 @@ video {
 }
 
 .social-media-wrapper {
-  display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     width: 80%;
@@ -616,6 +617,9 @@ button[type="submit"] {
     width: 80%;
     position: absolute;
     bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
 }
 
 .copyrights {
