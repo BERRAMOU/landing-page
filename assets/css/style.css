@@ -6,6 +6,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -33,11 +34,13 @@ header {
     min-height: 100%;
 }
 
-nav {
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+nav li {
+    list-style: none;
+}
+
+.is-active ul {
+    opacity: 1;
+    visibility: visible;
 }
 
 nav ul {
@@ -51,20 +54,11 @@ nav ul {
     transition: visibility .2s, opacity .3s ease-in-out;
 }
 
-nav li {
-    list-style: none;
-}
-
-.is-active ul {
-    opacity: 1;
-    visibility: visible;
-}
-
 nav button {
     display: inline-block;
     border: 0;
     outline: 0;
-    text-decoration: 0;
+    text-decoration: none;
 }
 
 .hamburger-box {
@@ -115,20 +109,6 @@ li a {
     text-transform: uppercase;
 }
 
-.scroll-down {
-    margin-top: 25px;
-    border: 1px solid #c59a6d;
-    display: inline-block;
-    width: 28px;
-    height: 22px;
-    padding-top: 7px;
-}
-
-.scroll-down img {
-    width: 15px;
-    height: 15px;
-}
-
 .intro hr {
     border: 0;
     border-top: 1px solid #c59a6d;
@@ -142,6 +122,20 @@ li a {
     border-radius: 2px;
     padding: 20px 50px;
     font-weight: 900;
+}
+
+.scroll-down {
+    margin-top: 25px;
+    border: 1px solid #c59a6d;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    padding-top: 7px;
+}
+
+.scroll-down img {
+    width: 15px;
+    height: 15px;
 }
 
 .section-wrapper {
@@ -179,54 +173,6 @@ li a {
 .scroll img {
     width: 35px;
     height: 35px;
-}
-
-.video-content {
-    position: relative;
-    min-height: 100%;
-    width: 100%;
-}
-
-.video-controls {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-video {
-    width: 100% !important;
-    height: auto !important;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-
-.video-wrapper {
-    position: relative;
-    height: 300px;
-    width: 100%;
-    overflow: hidden;
-}
-
-#video-controls {
-    width: 100%;
-}
-
-.video-wrapper button {
-    border: 0;
-    outline: 0;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.01);
-    opacity: 0;
-    visibility: hidden;
-    transition: all .3s ease-in-out;
-}
-
-.video-wrapper:hover button {
-    opacity: 1;
-    visibility: visible;
 }
 
 /* Services section*/
@@ -288,6 +234,7 @@ video {
     justify-content: space-around;
     text-align: center;
     flex-direction: column;
+    position: relative;
 }
 
 .shop-section button {
@@ -387,6 +334,7 @@ video {
     cursor: pointer;
 }
 
+
 .partners-wrapper {
     background-image: url("../images/clients-bg.png");
     background-size: cover;
@@ -405,6 +353,7 @@ video {
     width: 70%;
     padding-top: 70px;
 }
+
 
 .team-members {
     display: flex;
@@ -452,6 +401,7 @@ video {
     margin: 15px;
     color: #c59a6d;
 }
+
 
 .section-wrapper__tweets {
     background-image: url("../images/tweets-bg.png");
@@ -637,4 +587,166 @@ button[type="submit"] {
     text-decoration: none;
 }
 
+
+@media (min-width: 768px) {
+
+}
+
+@media (max-width: 768px) {
+
+    .intro {
+        margin-top: 35px;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        padding-top: 15px;
+        text-align: center;
+        height: 55px;
+        display: inline-block;
+    }
+
+    .services-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .service-item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 10px;
+        margin: 10px 10px;
+        border: 2px solid #8e9297;
+        border-radius: 3px;
+        height: 300px;
+        width: 100%;
+        transition: border-color .2s, height 0.8s ease-in-out;
+    }
+
+    .portfolio-wrapper {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .portfolio-item__description {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .portfolio-item:before {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .partners-wrapper__items {
+        width: 90%;
+    }
+
+    .team-members {
+        flex-direction: column;
+        margin: 35px;
+    }
+
+    .team-member {
+        width: 80%;
+        height: 300px;
+        margin-bottom: 15px;
+    }
+
+    .team-hiring {
+        width: 20%;
+        height: 250px;
+    }
+
+    .form-control {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+    nav {
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .video-content {
+        position: relative;
+        min-height: 100%;
+        width: 100%;
+    }
+
+    .video-controls {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    video {
+        width: 100% !important;
+        height: auto !important;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .video-wrapper {
+        position: relative;
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #video-controls {
+        width: 100%;
+    }
+
+    .video-wrapper button {
+        border: 0;
+        outline: 0;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.01);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease-in-out;
+    }
+
+    .video-wrapper:hover button {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
 

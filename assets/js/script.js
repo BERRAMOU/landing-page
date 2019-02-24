@@ -49,7 +49,7 @@ $(document).ready(function () {
             video.pause();
         }
         else {
-            video.play();
+           /* video.play();*/
         }
 
     });
