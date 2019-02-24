@@ -672,10 +672,33 @@ button[type="submit"] {
         height: 250px;
     }
 
+    .address-wrapper{
+        width: 100%;
+    }
+    .address-wrapper p {
+        text-align: center;
+    }
+
+    .social-media-wrapper {
+        width: 100%;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
     .form-control {
         display: flex;
         flex-direction: column;
     }
+    .contact-form-wrapper {
+        width: 100%;
+    }
+
+    .address-wrapper h4 {
+        text-align: center;
+    }
+
 
 }
 
