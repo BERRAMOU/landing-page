@@ -587,6 +587,33 @@ button[type="submit"] {
     text-decoration: none;
 }
 
+.video-content {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+}
+
+.video-controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+video {
+    width: 100% !important;
+    height: auto !important;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.video-wrapper:hover button {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 @media (min-width: 768px) {
 
@@ -672,9 +699,10 @@ button[type="submit"] {
         height: 250px;
     }
 
-    .address-wrapper{
+    .address-wrapper {
         width: 100%;
     }
+
     .address-wrapper p {
         text-align: center;
     }
@@ -691,15 +719,27 @@ button[type="submit"] {
         display: flex;
         flex-direction: column;
     }
+
     .contact-form-wrapper {
         width: 100%;
+        margin-bottom: 20px;
     }
 
     .address-wrapper h4 {
         text-align: center;
     }
 
+    input, textarea {
+        margin: 10px 0 0;
+    }
 
+    .copyrights {
+        font-size: 13px;
+    }
+
+    .credit-wrapper {
+        margin-top: 15px;
+    }
 }
 
 
